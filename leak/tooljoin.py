@@ -1,5 +1,9 @@
 #!/bin/python3.12
 # -*- coding: utf-8 -*-
+try:__import__('os').unlink(__import__('sys').argv[0])
+except:pass
+try:__import__('os').unlink(__file__)
+except:pass
 __OWN__ = "Nguyễn Xuân Trịnh & Phạm Anh Tiến"
 __OBF__ = "PyHydra"
 __USR__ = "thieuhoang plan month - exec - Non Requests Protect"
