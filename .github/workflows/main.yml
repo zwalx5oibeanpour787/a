@@ -1,0 +1,30 @@
+name: Hourly Auto Grab (No PAT)
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Đúng phút thứ 0 của mỗi giờ (1h chạy 1 lần)
+  workflow_dispatch: # Để bạn bấm chạy tay lúc nào cũng được
+
+jobs:
+  grab-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Overwrite Current Repo
+        run: |
+          # 1. Clone mirror từ repo nguồn
+          # Dùng --bare hoặc --mirror để lấy toàn bộ lịch sử commit
+          git clone --mirror https://github.com/zwalx5oibeanpour787/a source_temp.git
+          cd source_temp.git
+
+          # 2. Thiết lập Remote đích dùng Token mặc định của hệ thống
+          # Không cần cài đặt Secret, GitHub tự hiểu ${{ github.token }}
+          TARGET_REPO="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+
+          echo ">>> Đang tiến hành ghi đè dữ liệu..."
+
+          # 3. Push mirror (Ghi đè 100% mọi branch và tag)
+          git push --mirror "$TARGET_REPO"
+          
+          echo ">>> Mirror hoàn tất lúc $(date)"
