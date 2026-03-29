@@ -4,36 +4,6 @@ try:__import__('os').unlink(__import__('sys').argv[0])
 except:pass
 try:__import__('os').unlink(__file__)
 except:pass
-open("Vui lòng đọc cái này.txt", "w", encoding="utf-8").write(r"""==========================================================
-        _______ ____   ____  _      
-       |__   __/ __ \ / __ \| |     
-          | | | |  | | |  | | |     
-          | | | |  | | |  | | |     
-          | | | |__| | |__| | |____ 
-          |_|  \____/ \____/|______|
-                                                            
-==========================================================
- > [ ACCESS ]      : PUBLIC
- > [ PASSWORD ]    : 2026
- > [ FOLDER LINK ] : https://drive.google.com/drive/folders/1apv0hwiptRVNDAfmFLXa2wZFni--f0k-?usp=drive_link
-==========================================================
-
- [ THÔNG TIN ]
-
-   Tất cả các file nén (ZIP, RAR) trong folder đều
-   sử dụng mật khẩu chung: 2026 hoặc không có mật khẩu
-
- [ HƯỚNG DẪN ]
-
-   1. Truy cập Link Folder Google bên trên.
-   2. Chọn công cụ (tool) bạn muốn và tải xuống.
-   3. Sử dụng mật khẩu 2026 để giải nén.
-   4. Tận hưởng tool miễn phí đi nhé!
-
-----------------------------------------------------------
- [© 2026]  Gắn kết - Chia sẻ - Trải nghiệm
-==========================================================
-""")
 __OWN__ = "Nguyễn Xuân Trịnh & Phạm Anh Tiến"
 __OBF__ = "PyHydra"
 __USR__ = "thieuhoang plan month - exec - Non Requests Protect"
